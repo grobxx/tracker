@@ -4,3 +4,24 @@ __pycache__/
 *.pyc
 .DS_Store
 reports/
+
+# Runtime outputs
+*_full.json
+*_complete.json
+*_simple.json
+*_capabilities.json
+goals_devgoal_*.json
+tracker_chat_agent_last_run.json
+tracker_issue_creation_check.json
+entities_list.json
+
+# Prompt/debug dumps
+last_*_prompt.txt
+last_prompt.txt
+
+# Generated reports
+comment_report_*.md
+goal_report_*.md
+report_project_*.md
+goals_comments_monitor.md
+goals_comments_monitor.json

@@ -1,0 +1,141 @@
+{
+  "entity_type": "project",
+  "entity_id": "2465",
+  "basic_info": {
+    "self": "https://api.tracker.yandex.net/v2/projects/2465",
+    "id": "2465",
+    "version": 161,
+    "key": "Перевести 100% продуктового трафика на новую архитектуру защиты веб-приложений.",
+    "name": "Перевести 100% продуктового трафика на новую архитектуру защиты веб-приложений.",
+    "description": "Внедрение нового решения Anti-DDoS \\\\ Anti-Bot \\\\ WAF\n\n#|\n||\n\n**Краткое описание проекта:**\n\n|\n\nПроект направлен на перевод 100% продуктового трафика на новую архитектуру защиты веб-приложений и переход на **одного** провайдера защиты Anti-DDoS и Anti-Bot - Servicepipe. Сейчас защита веб-приложений построена на нескольких провайдерах (Curator, Servicepipe, WMX), что увеличивает затраты, усложняет администрирование и может создавать проблемы в инцидент-менеджменте. Дополнительным драйвером является истечение в апреле 2026 года контракта на WMX.\n\n||\n||\n\n**Цель проекта:**\n\n|\n\n* Снизить затраты на Anti-Bot защиту и WAF на  8.6 млн. рублей C 26.6 млн в год до 18 млн в год.\n* Сократить число поставщиков защиты веб-приложений без критического ухудшения уровня безопасности\n\n||\n||\n\n**Проблемы, и как проект их решает:**\n\n|\n\n#|\n||\n\n**Проблема**\n\n|\n\n**Ответ на проблему**\n\n|\n\n**Ожидаемый результат**\n\n||\n||\n\nТекущая схема использования нескольких провайдеров (Curator, Servicepipe, WMX) увеличивает затраты\n\n|\n\nПереход на одного провайдера (Servicepipe)\n\n|\n\nСнижение/**стабилизация** затрат относительно многопровайдерной схемы\n\n||\n||\n\nСложность администрирования из-за разнородной схемы защиты (различия в функционале)\n\n|\n\nЦентрализация защиты у одного провайдера\n\n|\n\nУпрощение администрирования, единые настройки и методы защиты для сервсиов\n\n||\n||\n\nПотенциальные проблемы с инцидент-менеджментом\n\n|\n\nКонсолидация провайдера и архитектуры\n\n|\n\nУпрощение координации при инцидентах\n\n||\n||\n\nВозможное дублирование функционала между сервисами\n\n|\n\nПересмотр уровней защиты\n\n|\n\nИсключение функционального дубляжа\n\n||\n||\n\nРиск роста стоимости из-за условий WMX\n\n|\n\nПереоценка текущих провайдеров и переход на экономически обоснованный вариант\n\n|\n\nОтсутствие увеличения стоимости, изменение подхода к защите\n\n||\n|#\n\n&nbsp;\n\n||\n||\n\n**DOD:**\n\n|\n\n&nbsp;\n\n**Веха 0: Тендер и расширение контракта (конец апреля)**\n\n[X] Выполнена оценка текущих провайдеров и сравнение с альтернативными решениями\n\n[X] Подготовлено и зафиксировано предложение по наиболее экономически и технически обоснованному варианту защиты\n\n[ ] Проведены тендерные процедуры по выбору поставщика\n\n[ ] Подписан доп соглашение.\n\n&nbsp;\n\n**Веха 1: Архитектура миграции утверждена (30.03)**\n\n[X] Пройден АДР.\n\n[X] Составлена схема миграции: список сервисов, разделение на группы (Тиры) для очередности переключения.\n\n[X] Есть описание L7-логика маршрутизации.\n\n[X] Есть описание необходимых для пробрасывания в сервисы хедеров (СОРМ, что еще?) - Леша Г., Devops observability логирование хедеров.\n\n[X] Определены критерии успешного переключения (метрики доступности, latency, ошибки 4xx/5xx).\n\n[X] Договориться про этап пилотирования с SP- Денис\n\n[X] **Провести тестирование на группе тестирования, дать ок на переключение Александр Наумов.**\n\n[X] Согласован план отката и ответственные (RFC).\n\n&nbsp;\n\n**Веха 2 :  Подготовка SSL (25.03)**\n\n[X] Выполнена подготовка, загрузка SSL-сертификатов для доменов РФ в ServicePipe\n\n&nbsp;\n\n**Веха 3: Этап 1 Миграция в режиме мониторинга и обучения (2 недели) (31.03 старт-14.04)**\n\n[X] Веб ( www.lamoda.ru ) переверен на Servicepipe\n\n[ ] Завершен период стабильной тестовой работы сервисов\n\n[ ] Соблюдены критерии успешного переключения\n\n&nbsp;\n\n**Веха 4: Этап 1 Включение защиты в Servipe Pipe(17.04)**\n\n[ ] Произведен анализ логов и сформированы правила на стороне Servicepipe\n\n[ ] Веб ( www.lamoda.ru )находится в под защитой правил фильтрации\n\n[ ] Произведена оценка метрик антиробота\n\n[ ] ТОП 5 Бизнес метрик стабильны\n\n&nbsp;\n\n**Веха 5: Этап 2 Миграция в режиме мониторинга и обучения (2 недели) (сроки уточнятся после закупки)**\n\n[ ] Внешние \"исходящие\" интеграции- список партнеров, кто может использовать ip для интеграции.- **Леша Г.**\n\n[ ] Подготовлен план коммуникация с инструкциями и чеклистом по переключению для сервисов - **Леша Г.**\n\n[ ] Оставшиеся группы сервисов переведены на Servicepipe\n\n[ ] Завершен период стабильной тестовой работы сервисов\n\n[ ] Соблюдены критерии успешного переключения\n\n&nbsp;\n\n**Веха 6: Этап 2 Включение защиты в Servipe Pipe Этап 2 (сроки уточнятся после закупки)**\n\n[ ] Проведен экспорт правил и политик из Qrator\n\n[ ] Правила и политики импортированы и адаптированы для ServicePipe\n\n[ ] Произведен анализ логов и сформированы правила на стороне Servicepipe\n\n[ ]  Веб ламода.ру находится в под защитой правил фильтрации\n\n[ ] Произведена оценка метрик антиробота\n\n[ ] ТОП 5 Бизнес метрик стабильны\n\n&nbsp;\n\n**Веха 7: Декоммиссия Qrator (от 3 месяцев)**\n\n[ ] Доступ к сервисам извне возможен только через Servicepipe.\n\n[ ] Проект официально завершен.\n\n&nbsp;\n\n||\n||\n\n&nbsp;\n\nМетрики:\n\n|\n\n{% cut \"Ключевые метрики\" %}\n\n#|\n||\n\n**Название**\n\n|\n\n**Как считаем**\n\n|\n\n**Аs is**\n\n|\n\n**To be Этап 1**\n\n|\n\n**To be Этап 2**\n\n||\n||\n\nКоличество сервисов Т1 на новой платформе\n\n|\n\n|\n\n2\n\n|\n\n|\n\n||\n||\n\nКоличество сервисов Т2 на новой платформе\n\n|\n\n|\n\n|\n\n|\n\n||\n||\n\nКоличество сервисов использующих WAF\n\n|\n\n|\n\n|\n\n|\n\n||\n||\n\nКоличество сервисов использующих Bot-protection\n\n|\n\n|\n\n|\n\n|\n\n||\n|#\n\n&nbsp;\n\n{% endcut %}\n\n||\n||\n\n&nbsp;\n\nРиски:\n\n|\n\n#|\n||\n\nНазвание\n\n|\n\nВероятность\n\n|\n\nВлияние\n\n|\n\nВес\n\n|\n\nСтратегия А\n\n|\n\nСтратегия B\n\n|\n\nРеализовался\n\n||\n||\n\nРиск критического ухудшения уровня безопасности при сокращении поставщиков\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n||\n||\n\nСложность миграции 100% трафика\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n||\n||\n\nРиск ухудшения инцидент-менеджмента в переходный период\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n||\n||\n\nРиск роста стоимости при переходе\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n||\n||\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n||\n||\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n||\n|#\n\n||\n||\n\n**Основные Стейкхолдеры:**\n\n|\n\n#|\n||\n\n**Стейкхолдер**\n\n|\n\n**Интерес**\n\n|\n\n**Роль в проекте**\n\n||\n||\n\nCTO\n\n|\n\nЭкономия бюджета,  улучшение качества защиты от роботов\n\n|\n\n||\n||\n\nCISO\n\n|\n\nЭкономия бюджета,  улучшение качества защиты от роботов\n\n|\n\n||\n||\n\n|\n\n|\n\n||\n|#\n\n||\n||\n\n**Команда проекта:**\n\n|\n\n#|\n||\n\n**Кто**\n\n|\n\n**Роль на проекте**\n\n|\n\n**За что отвечает**\n\n||\n||\n\n@denis.krylov\n\n|\n\nТехнический лидер\n\n|\n\nТехническую реализуемость, конфигурацию решения, качество миграции 100% трафика\n\n||\n||\n\n@aleksey.gimatdinov\n\n|\n\nTPM - Технический менеджер проекта.\n\n|\n\nПланирование, управление сроками, управление ожиданиями стейкхолдеров, а также достижение dod.\n\n||\n||\n\n|\n\n|\n\n||\n|#\n\n||\n||\n\nКоммуникации на проекте:\n\n|\n\n#|\n||\n\nКанал связи:\n\n|\n\nДля чего:\n\n||\n||\n\n|\n\n||\n|#\n\n||\n||\n\n**Документация:**\n\n|\n\n||\n||\n\n|\n\n||\n||\n\nИтоги проекта:\n(после завершения)\n\n|\n\n||\n||\n\nУроки проекта:\n(после завершения)\n\n|\n\n||\n|#\n\n&nbsp;\n\n&nbsp;\n\n",
+    "lead": {
+      "self": "https://api.tracker.yandex.net/v2/users/8000000000027940",
+      "id": "8000000000027940",
+      "display": "Aleksey Gimatdinov",
+      "cloudUid": "aje8bmdk9h8221ivrpfi",
+      "passportUid": 1130000069783877
+    },
+    "status": "at_risk",
+    "startDate": "2026-01-12",
+    "endDate": "2026-06-30"
+  },
+  "comments": [
+    {
+      "self": "https://api.tracker.yandex.net/v3/entities/project/697229920e52e26ea8aeb0aa/comments/2839667",
+      "id": 2839667,
+      "longId": "69a5ba5e81c4a1087e1bdb45",
+      "text": "https://wiki.yandex.ru/users/aleksey.gimatdinov/antirobot/ общий план с учетом требований CTO.\n\n&nbsp;\n\n",
+      "textHtml": "<p data-line=\"0\" class=\"line\"><a href=\"https://wiki.yandex.ru/users/aleksey.gimatdinov/antirobot/\" target=\"_blank\" rel=\"noreferrer noopener\">https://wiki.yandex.ru/users/aleksey.gimatdinov/antirobot/</a> общий план с учетом требований CTO.</p>\n<p data-line=\"2\" class=\"line\"> </p>\n",
+      "createdBy": {
+        "self": "https://api.tracker.yandex.net/v3/users/8000000000027940",
+        "id": "8000000000027940",
+        "display": "Aleksey Gimatdinov",
+        "cloudUid": "aje8bmdk9h8221ivrpfi",
+        "passportUid": 1130000069783877
+      },
+      "updatedBy": {
+        "self": "https://api.tracker.yandex.net/v3/users/8000000000027940",
+        "id": "8000000000027940",
+        "display": "Aleksey Gimatdinov",
+        "cloudUid": "aje8bmdk9h8221ivrpfi",
+        "passportUid": 1130000069783877
+      },
+      "createdAt": "2026-03-02T16:27:10.860+0000",
+      "updatedAt": "2026-03-02T16:27:10.860+0000",
+      "summonees": [
+        {
+          "self": "https://api.tracker.yandex.net/v3/users/8000000000019683",
+          "id": "8000000000019683",
+          "display": "Denis Gorchakov",
+          "cloudUid": "aje2d0r4u14uq6em40lf",
+          "passportUid": 1130000068212666
+        },
+        {
+          "self": "https://api.tracker.yandex.net/v3/users/8000000000010471",
+          "id": "8000000000010471",
+          "display": "Danila Elezov",
+          "cloudUid": "ajejtqp1c39bbff3pt8t",
+          "passportUid": 1130000067318718
+        }
+      ],
+      "version": 1,
+      "type": "standard",
+      "transport": "internal"
+    },
+    {
+      "self": "https://api.tracker.yandex.net/v3/entities/project/697229920e52e26ea8aeb0aa/comments/2907786",
+      "id": 2907786,
+      "longId": "69b1473e2fd77b2396b0e5c7",
+      "text": "**Прогресс:** \\[12.5\\]%\n\n**✅ Что сделали:**\n\n[X] Выполнена оценка текущих провайдеров и сравнение с альтернативными решениями\n\n[X] Подготовлено и зафиксировано предложение по наиболее экономически и технически обоснованному варианту защиты\n\n[X] Добавьте описание задачи или пункт проверки\n\n&nbsp;\n\n**🎯 Фокус дальше к** **30.03**\\*\\*:\\*\\*\n\n* Проводим тендерные процедуры по выбору поставщика\n\n  **Веха 1: Архитектура миграции утверждена**\n\n* Составлена схема миграции: список сервисов и внешние \"исходящие\" интеграции, разделение на группы (Тиры) для очередности переключения - **Денис К.**\n\n* Есть описание L7-логика маршрутизации - **Денис К.**\n\n* Есть описание необходимых для пробрасывания в сервисы хедеров (СОРМ, что еще?) - **Леша Г.,**\n\n* Задача дя Devops observability логирование хедеров. - **Леша Г.,**\n\n* Определены критерии успешного переключения (метрики доступности, latency, ошибки 4xx/5xx) - **Денис К. Леша Г.,**\n\n* Согласован план отката и ответственные (RFC) - **Денис К.**\n\n* Подготовлен план коммуникация с инструкциями и чеклистом по переключению для сервисов - **Леша Г.**\n\n🚧 Блокеры и риски: Нет",
+      "textHtml": "<p data-line=\"0\" class=\"line\"><strong>Прогресс:</strong> [12.5]%</p>\n<p data-line=\"2\" class=\"line\"><strong>✅ Что сделали:</strong></p>\n<div class=\"checkbox line\" data-line=\"4\">\n<input type=\"checkbox\" id=\"checkbox0\" disabled checked=\"true\" />\n<label for=\"checkbox0\">Выполнена оценка текущих провайдеров и сравнение с альтернативными решениями</label>\n</div>\n<div class=\"checkbox line\" data-line=\"6\">\n<input type=\"checkbox\" id=\"checkbox1\" disabled checked=\"true\" />\n<label for=\"checkbox1\">Подготовлено и зафиксировано предложение по наиболее экономически и технически обоснованному варианту защиты</label>\n</div>\n<div class=\"checkbox line\" data-line=\"8\">\n<input type=\"checkbox\" id=\"checkbox2\" disabled checked=\"true\" />\n<label for=\"checkbox2\">Добавьте описание задачи или пункт проверки</label>\n</div>\n<p data-line=\"10\" class=\"line\"> </p>\n<p data-line=\"12\" class=\"line\"><strong>🎯 Фокус дальше к</strong> <strong>30.03</strong>**:**</p>\n<ul>\n<li>\n<p data-line=\"14\">Проводим тендерные процедуры по выбору поставщика</p>\n<p data-line=\"16\"><strong>Веха 1: Архитектура миграции утверждена</strong></p>\n</li>\n<li>\n<p data-line=\"18\">Составлена схема миграции: список сервисов и внешние \"исходящие\" интеграции, разделение на группы (Тиры) для очередности переключения - <strong>Денис К.</strong></p>\n</li>\n<li>\n<p data-line=\"20\">Есть описание L7-логика маршрутизации - <strong>Денис К.</strong></p>\n</li>\n<li>\n<p data-line=\"22\">Есть описание необходимых для пробрасывания в сервисы хедеров (СОРМ, что еще?) - <strong>Леша Г.,</strong></p>\n</li>\n<li>\n<p data-line=\"24\">Задача дя Devops observability логирование хедеров. - <strong>Леша Г.,</strong></p>\n</li>\n<li>\n<p data-line=\"26\">Определены критерии успешного переключения (метрики доступности, latency, ошибки 4xx/5xx) - <strong>Денис К. Леша Г.,</strong></p>\n</li>\n<li>\n<p data-line=\"28\">Согласован план отката и ответственные (RFC) - <strong>Денис К.</strong></p>\n</li>\n<li>\n<p data-line=\"30\">Подготовлен план коммуникация с инструкциями и чеклистом по переключению для сервисов - <strong>Леша Г.</strong></p>\n</li>\n</ul>\n<p data-line=\"32\" class=\"line\">🚧 Блокеры и риски: Нет</p>\n",
+      "createdBy": {
+        "self": "https://api.tracker.yandex.net/v3/users/8000000000027940",
+        "id": "8000000000027940",
+        "display": "Aleksey Gimatdinov",
+        "cloudUid": "aje8bmdk9h8221ivrpfi",
+        "passportUid": 1130000069783877
+      },
+      "updatedBy": {
+        "self": "https://api.tracker.yandex.net/v3/users/8000000000027940",
+        "id": "8000000000027940",
+        "display": "Aleksey Gimatdinov",
+        "cloudUid": "aje8bmdk9h8221ivrpfi",
+        "passportUid": 1130000069783877
+      },
+      "createdAt": "2026-03-11T10:43:10.593+0000",
+      "updatedAt": "2026-03-27T07:32:11.346+0000",
+      "summonees": [
+        {
+          "self": "https://api.tracker.yandex.net/v3/users/8000000000000915",
+          "id": "8000000000000915",
+          "display": "Ilya Kuleshov",
+          "cloudUid": "ajeh9f79ulpp0b2b6vdt",
+          "passportUid": 1130000065331927
+        },
+        {
+          "self": "https://api.tracker.yandex.net/v3/users/8000000000010471",
+          "id": "8000000000010471",
+          "display": "Danila Elezov",
+          "cloudUid": "ajejtqp1c39bbff3pt8t",
+          "passportUid": 1130000067318718
+        },
+        {
+          "self": "https://api.tracker.yandex.net/v3/users/8000000000032638",
+          "id": "8000000000032638",
+          "display": "Denis Krylov",
+          "cloudUid": "ajenvf472ctlu9do29a2",
+          "passportUid": 1130000070542025
+        }
+      ],
+      "version": 4,
+      "type": "standard",
+      "transport": "internal"
+    },
+    {
+      "self": "https://api.tracker.yandex.net/v3/entities/project/697229920e52e26ea8aeb0aa/comments/3029673",
+      "id": 3029673,
+      "longId": "69c63527a2c6f02e7294401d",
+      "text": "**Прогресс:** \\[30\\]%\n\n**✅ Что сделали:**\n\n[X] Составлена схема миграции: список сервисов и внешние \"исходящие\" интеграции, разделение на группы (Тиры) для очередности переключения - **Денис К.**\n\n[X] Есть описание L7-логика маршрутизации - **Денис К.**\n\n[X] Есть описание необходимых для пробрасывания в сервисы хедеров (СОРМ, что еще?) - Леша Г., Devops observability логирование хедеров.\n\n[X] Определены критерии успешного переключения (метрики доступности, latency, ошибки 4xx/5xx).\n\n[X] Договориться про этап пилотирования с SP- Денис\n\n[X] Провести тестирование на группе тестирования, дать- ок на переключение Александр Наумов.\n\n[X] Выполнена подготовка, загрузка SSL-сертификатов для доменов РФ в ServicePipe\n\n**🎯 Фокус дальше к** **17.04**\\*\\*:\\*\\*\n\n* [ ] Проводим тендерные процедуры по выбору поставщика и подписываем договор.\n\n  [X] Провести тестирование на группе тестирования, дать ок на переключение Александр Наумов.\n\n  [X] Согласован план отката и ответственные (RFC).\n\n* **Веха 3: Этап 1 Миграция в режиме мониторинга и обучения (2 недели) (30.03 старт-14.04)**\n\n  [X] Веб ( www.lamoda.ru ) переверен на Servicepipe\n\n  [ ] Завершен период стабильной тестовой работы сервисов\n\n  [ ] Соблюдены критерии успешного переключения\n\n  **Веха 4: Этап 1 Включение защиты в Servipe Pipe(17.04)- при условии заключения договора.**\n\n  [ ] Произведен анализ логов и сформированы правила на стороне Servicepipe\n\n  [ ] Веб ( www.lamoda.ru )находится в под защитой правил фильтрации\n\n  [ ] Произведена оценка метрик антиробота\n\n  [ ] ТОП 5 Бизнес метрик стабильны\n\n  &nbsp;\n  \n\n🚧 Блокеры и риски: Проведение тендера и заключение  договора",
+      "textHtml": "<p data-line=\"0\" class=\"line\"><strong>Прогресс:</strong> [30]%</p>\n<p data-line=\"2\" class=\"line\"><strong>✅ Что сделали:</strong></p>\n<div class=\"checkbox line\" data-line=\"4\">\n<input type=\"checkbox\" id=\"checkbox0\" disabled checked=\"true\" />\n<label for=\"checkbox0\">Составлена схема миграции: список сервисов и внешние \"исходящие\" интеграции, разделение на группы (Тиры) для очередности переключения - <strong>Денис К.</strong></label>\n</div>\n<div class=\"checkbox line\" data-line=\"6\">\n<input type=\"checkbox\" id=\"checkbox1\" disabled checked=\"true\" />\n<label for=\"checkbox1\">Есть описание L7-логика маршрутизации - <strong>Денис К.</strong></label>\n</div>\n<div class=\"checkbox line\" data-line=\"8\">\n<input type=\"checkbox\" id=\"checkbox2\" disabled checked=\"true\" />\n<label for=\"checkbox2\">Есть описание необходимых для пробрасывания в сервисы хедеров (СОРМ, что еще?) - Леша Г., Devops observability логирование хедеров.</label>\n</div>\n<div class=\"checkbox line\" data-line=\"10\">\n<input type=\"checkbox\" id=\"checkbox3\" disabled checked=\"true\" />\n<label for=\"checkbox3\">Определены критерии успешного переключения (метрики доступности, latency, ошибки 4xx/5xx).</label>\n</div>\n<div class=\"checkbox line\" data-line=\"12\">\n<input type=\"checkbox\" id=\"checkbox4\" disabled checked=\"true\" />\n<label for=\"checkbox4\">Договориться про этап пилотирования с SP- Денис</label>\n</div>\n<div class=\"checkbox line\" data-line=\"14\">\n<input type=\"checkbox\" id=\"checkbox5\" disabled checked=\"true\" />\n<label for=\"checkbox5\">Провести тестирование на группе тестирования, дать- ок на переключение Александр Наумов.</label>\n</div>\n<div class=\"checkbox line\" data-line=\"16\">\n<input type=\"checkbox\" id=\"checkbox6\" disabled checked=\"true\" />\n<label for=\"checkbox6\">Выполнена подготовка, загрузка SSL-сертификатов для доменов РФ в ServicePipe</label>\n</div>\n<p data-line=\"18\" class=\"line\"><strong>🎯 Фокус дальше к</strong> <strong>17.04</strong>**:**</p>\n<ul>\n<li>\n<div class=\"checkbox line\" data-line=\"20\">\n<input type=\"checkbox\" id=\"checkbox7\" disabled />\n<label for=\"checkbox7\">Проводим тендерные процедуры по выбору поставщика и подписываем договор.</label>\n</div>\n<div class=\"checkbox line\" data-line=\"22\">\n<input type=\"checkbox\" id=\"checkbox8\" disabled checked=\"true\" />\n<label for=\"checkbox8\">Провести тестирование на группе тестирования, дать ок на переключение Александр Наумов.</label>\n</div>\n<div class=\"checkbox line\" data-line=\"24\">\n<input type=\"checkbox\" id=\"checkbox9\" disabled checked=\"true\" />\n<label for=\"checkbox9\">Согласован план отката и ответственные (RFC).</label>\n</div>\n</li>\n<li>\n<p data-line=\"26\"><strong>Веха 3: Этап 1 Миграция в режиме мониторинга и обучения (2 недели) (30.03 старт-14.04)</strong></p>\n<div class=\"checkbox line\" data-line=\"28\">\n<input type=\"checkbox\" id=\"checkbox10\" disabled checked=\"true\" />\n<label for=\"checkbox10\">Веб ( <a href=\"http://www.lamoda.ru\" target=\"_blank\" rel=\"noreferrer noopener\">www.lamoda.ru</a> ) переверен на Servicepipe</label>\n</div>\n<div class=\"checkbox line\" data-line=\"30\">\n<input type=\"checkbox\" id=\"checkbox11\" disabled />\n<label for=\"checkbox11\">Завершен период стабильной тестовой работы сервисов</label>\n</div>\n<div class=\"checkbox line\" data-line=\"32\">\n<input type=\"checkbox\" id=\"checkbox12\" disabled />\n<label for=\"checkbox12\">Соблюдены критерии успешного переключения</label>\n</div>\n<p data-line=\"34\"><strong>Веха 4: Этап 1 Включение защиты в Servipe Pipe(17.04)- при условии заключения договора.</strong></p>\n<div class=\"checkbox line\" data-line=\"36\">\n<input type=\"checkbox\" id=\"checkbox13\" disabled />\n<label for=\"checkbox13\">Произведен анализ логов и сформированы правила на стороне Servicepipe</label>\n</div>\n<div class=\"checkbox line\" data-line=\"38\">\n<input type=\"checkbox\" id=\"checkbox14\" disabled />\n<label for=\"checkbox14\">Веб ( <a href=\"http://www.lamoda.ru\" target=\"_blank\" rel=\"noreferrer noopener\">www.lamoda.ru</a> )находится в под защитой правил фильтрации</label>\n</div>\n<div class=\"checkbox line\" data-line=\"40\">\n<input type=\"checkbox\" id=\"checkbox15\" disabled />\n<label for=\"checkbox15\">Произведена оценка метрик антиробота</label>\n</div>\n<div class=\"checkbox line\" data-line=\"42\">\n<input type=\"checkbox\" id=\"checkbox16\" disabled />\n<label for=\"checkbox16\">ТОП 5 Бизнес метрик стабильны</label>\n</div>\n<p data-line=\"44\"> </p>\n</li>\n</ul>\n<p data-line=\"47\" class=\"line\">🚧 Блокеры и риски: Проведение тендера и заключение  договора</p>\n",
+      "createdBy": {
+        "self": "https://api.tracker.yandex.net/v3/users/8000000000027940",
+        "id": "8000000000027940",
+        "display": "Aleksey Gimatdinov",
+        "cloudUid": "aje8bmdk9h8221ivrpfi",
+        "passportUid": 1130000069783877
+      },
+      "updatedBy": {
+        "self": "https://api.tracker.yandex.net/v3/users/8000000000027940",
+        "id": "8000000000027940",
+        "display": "Aleksey Gimatdinov",
+        "cloudUid": "aje8bmdk9h8221ivrpfi",
+        "passportUid": 1130000069783877
+      },
+      "createdAt": "2026-03-27T07:43:35.557+0000",
+      "updatedAt": "2026-04-01T11:04:47.961+0000",
+      "version": 3,
+      "type": "standard",
+      "transport": "internal"
+    }
+  ]
+}

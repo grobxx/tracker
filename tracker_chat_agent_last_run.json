@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-04-15T15:14:29",
+  "user_request": "Нзвание задачи- течтовая тестовая и т.д. Описание - всякая дичь кепвапоыпыоывпо",
+  "default_queue": "SVT",
+  "fields": {
+    "queue": "SVT",
+    "summary": "Течтовая тестовая",
+    "description": "Всякая дичь, но в контексте... ожидаемый результат: ... критерии приемки: ...",
+    "components": [],
+    "tags": []
+  },
+  "result": {
+    "ok": false,
+    "stage": "confirm",
+    "error": "cancelled_by_user"
+  }
+}

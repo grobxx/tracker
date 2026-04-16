@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-04-15T19:18:22",
+  "queue": "SVT",
+  "queue_check": {
+    "status_code": 200,
+    "ok": true,
+    "response": {
+      "self": "https://api.tracker.yandex.net/v2/queues/SVT",
+      "id": 293,
+      "key": "SVT",
+      "version": 112,
+      "name": "SecVTeam",
+      "lead": {
+        "self": "https://api.tracker.yandex.net/v2/users/8000000000023304",
+        "id": "8000000000023304",
+        "display": "Evgeny Sokolov",
+        "cloudUid": "aje4jkqfis2abl2iuve1",
+        "passportUid": 1130000069164283
+      },
+      "assignAuto": false,
+      "defaultType": {
+        "self": "https://api.tracker.yandex.net/v2/issuetypes/2",
+        "id": "2",
+        "key": "task",
+        "display": "Задача"
+      },
+      "defaultPriority": {
+        "self": "https://api.tracker.yandex.net/v2/priorities/3",
+        "id": "3",
+        "key": "normal",
+        "display": "Средний"
+      },
+      "denyVoting": false,
+      "denyConductorAutolink": false,
+      "denyTrackerAutolink": false,
+      "useComponentPermissionsIntersection": false,
+      "addSummoneeToIssueAccess": true,
+      "addCommentAuthorToIssueFollowers": true,
+      "workflowActionsStyle": "hidden",
+      "useLastSignature": false,
+      "createIssueFormShowType": "always",
+      "noMcp": false
+    }
+  },
+  "issue_create": {}
+}

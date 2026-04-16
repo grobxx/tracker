@@ -1,0 +1,49 @@
+[
+  {
+    "self": "https://api.tracker.yandex.net/v3/entities/goal/69845bd454c0e83bf3554b70",
+    "id": "69845bd454c0e83bf3554b70",
+    "version": 15,
+    "shortId": 3814,
+    "entityType": "goal",
+    "createdBy": {
+      "self": "https://api.tracker.yandex.net/v3/users/8000000000027940",
+      "id": "8000000000027940",
+      "display": "Aleksey Gimatdinov",
+      "cloudUid": "aje8bmdk9h8221ivrpfi",
+      "passportUid": 1130000069783877
+    },
+    "createdAt": "2026-02-05T08:59:00.433+0000",
+    "updatedAt": "2026-04-15T12:21:01.903+0000",
+    "tags": [],
+    "summary": "Без названия",
+    "comments": [
+      {
+        "self": "https://api.tracker.yandex.net/v3/entities/goal/69845bd454c0e83bf3554b70/comments/2916206",
+        "id": 2916206,
+        "longId": "69b28b8a0f33bc3a0c16648d",
+        "text": "Апдейт на 12/03: \n\n* Выявили кейс с массовыми заказами по холдированию стока, на данный момент проводим расследование для деанонимизации фродера и разработки стратегии борьбы с фродом\n* Выкатили фичу позволяющую отменять заказы с подменой статуса в ЛК для скрытия факта отмены заказа от фродеров. Ожидаем, что фродерам сложнее будет узнать о наших действиях для обхода наших ограничений в будущем",
+        "textHtml": "<p data-line=\"0\" class=\"line\">Апдейт на 12/03:</p>\n<ul>\n<li>Выявили кейс с массовыми заказами по холдированию стока, на данный момент проводим расследование для деанонимизации фродера и разработки стратегии борьбы с фродом</li>\n<li>Выкатили фичу позволяющую отменять заказы с подменой статуса в ЛК для скрытия факта отмены заказа от фродеров. Ожидаем, что фродерам сложнее будет узнать о наших действиях для обхода наших ограничений в будущем</li>\n</ul>\n",
+        "createdBy": {
+          "self": "https://api.tracker.yandex.net/v3/users/8000000000008707",
+          "id": "8000000000008707",
+          "display": "Aleksandr Komin",
+          "cloudUid": "aje3e1hbi24kl4jakenu",
+          "passportUid": 1130000067057759
+        },
+        "updatedBy": {
+          "self": "https://api.tracker.yandex.net/v3/users/8000000000008707",
+          "id": "8000000000008707",
+          "display": "Aleksandr Komin",
+          "cloudUid": "aje3e1hbi24kl4jakenu",
+          "passportUid": 1130000067057759
+        },
+        "createdAt": "2026-03-12T09:46:50.333+0000",
+        "updatedAt": "2026-03-12T09:46:50.333+0000",
+        "version": 1,
+        "type": "standard",
+        "transport": "internal"
+      }
+    ],
+    "relations": []
+  }
+]

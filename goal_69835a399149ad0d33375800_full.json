@@ -1,0 +1,186 @@
+{
+  "entity_type": "goal",
+  "requested_ref": "3748",
+  "resolved": {
+    "goal_id": "69835a399149ad0d33375800",
+    "goal_short_id": 3748,
+    "resolver_response": {
+      "ok": true,
+      "status_code": 200,
+      "url": "https://api.tracker.yandex.net/v3/entities/goal/_search",
+      "data": {
+        "hits": 1,
+        "pages": 1,
+        "values": [
+          {
+            "self": "https://api.tracker.yandex.net/v3/entities/goal/69835a399149ad0d33375800",
+            "id": "69835a399149ad0d33375800",
+            "version": 36,
+            "shortId": 3748,
+            "entityType": "goal",
+            "createdBy": {
+              "self": "https://api.tracker.yandex.net/v3/users/8000000000027940",
+              "id": "8000000000027940",
+              "display": "Aleksey Gimatdinov",
+              "cloudUid": "aje8bmdk9h8221ivrpfi",
+              "passportUid": 1130000069783877
+            },
+            "createdAt": "2026-02-04T14:39:53.719+0000",
+            "updatedAt": "2026-04-15T12:17:30.164+0000"
+          }
+        ]
+      },
+      "requested_at": "2026-04-16T18:56:44"
+    }
+  },
+  "collected_at": "2026-04-16T18:56:44",
+  "calls": {
+    "goal_v3": {
+      "ok": true,
+      "status_code": 200,
+      "url": "https://api.tracker.yandex.net/v3/entities/goal/69835a399149ad0d33375800?expand=all",
+      "data": {
+        "self": "https://api.tracker.yandex.net/v3/entities/goal/69835a399149ad0d33375800",
+        "id": "69835a399149ad0d33375800",
+        "version": 36,
+        "shortId": 3748,
+        "entityType": "goal",
+        "createdBy": {
+          "self": "https://api.tracker.yandex.net/v3/users/8000000000027940",
+          "id": "8000000000027940",
+          "display": "Aleksey Gimatdinov",
+          "cloudUid": "aje8bmdk9h8221ivrpfi",
+          "passportUid": 1130000069783877
+        },
+        "createdAt": "2026-02-04T14:39:53.719+0000",
+        "updatedAt": "2026-04-15T12:17:30.164+0000"
+      },
+      "requested_at": "2026-04-16T18:56:45"
+    },
+    "goal_v2": {
+      "ok": false,
+      "status_code": 404,
+      "url": "https://api.tracker.yandex.net/v2/goals/3748",
+      "data": {
+        "errors": {},
+        "errorsData": {},
+        "errorMessages": [
+          "Requested action for /v2/goals/3748 was not found"
+        ],
+        "statusCode": 404
+      },
+      "requested_at": "2026-04-16T18:56:45"
+    },
+    "comments_v3": {
+      "ok": true,
+      "status_code": 200,
+      "url": "https://api.tracker.yandex.net/v3/entities/goal/69835a399149ad0d33375800/comments?expand=all",
+      "data": [
+        {
+          "self": "https://api.tracker.yandex.net/v3/entities/goal/69835a399149ad0d33375800/comments/2908416",
+          "id": 2908416,
+          "longId": "69b14f902fd77b2396b127fe",
+          "text": "**Прогресс:** \\[12.5\\]%\n\n**✅ Что сделали:**\n\n[x] Выполнена оценка текущих провайдеров и сравнение с альтернативными решениями\n\n[X] Подготовлено и зафиксировано предложение по наиболее экономически и технически обоснованному варианту защиты\n\n[X] Добавьте описание задачи или пункт проверки\n\n&nbsp;\n\n**🎯 Фокус дальше к** **20.03**\\*\\*:\\*\\*\n\n* Проводим тендерные процедуры по выбору поставщика\n\n  **Веха 1: Архитектура миграции утверждена**\n\n* Составлена схема миграции: список сервисов и внешние \"исходящие\" интеграции, разделение на группы (Тиры) для очередности переключения - **Денис К.**\n\n* Есть описание L7-логика маршрутизации - **Денис К.**\n\n* Есть описание необходимых для пробрасывания в сервисы хедеров (СОРМ, что еще?) - **Леша Г.,**\n\n* Задача дя Devops observability логирование хедеров. - **Леша Г.,**\n\n* Определены критерии успешного переключения (метрики доступности, latency, ошибки 4xx/5xx) - **Денис К. Леша Г.,**\n\n* Согласован план отката и ответственные (RFC) - **Денис К.**\n\n* Подготовлен план коммуникация с инструкциями и чеклистом по переключению для сервисов - **Леша Г.**\n\n🚧 Блокеры и риски:\n\nНет",
+          "textHtml": "<p data-line=\"0\" class=\"line\"><strong>Прогресс:</strong> [12.5]%</p>\n<p data-line=\"2\" class=\"line\"><strong>✅ Что сделали:</strong></p>\n<div class=\"checkbox line\" data-line=\"4\">\n<input type=\"checkbox\" id=\"checkbox0\" disabled checked=\"true\" />\n<label for=\"checkbox0\">Выполнена оценка текущих провайдеров и сравнение с альтернативными решениями</label>\n</div>\n<div class=\"checkbox line\" data-line=\"6\">\n<input type=\"checkbox\" id=\"checkbox1\" disabled checked=\"true\" />\n<label for=\"checkbox1\">Подготовлено и зафиксировано предложение по наиболее экономически и технически обоснованному варианту защиты</label>\n</div>\n<div class=\"checkbox line\" data-line=\"8\">\n<input type=\"checkbox\" id=\"checkbox2\" disabled checked=\"true\" />\n<label for=\"checkbox2\">Добавьте описание задачи или пункт проверки</label>\n</div>\n<p data-line=\"10\" class=\"line\"> </p>\n<p data-line=\"12\" class=\"line\"><strong>🎯 Фокус дальше к</strong> <strong>20.03</strong>**:**</p>\n<ul>\n<li>\n<p data-line=\"14\">Проводим тендерные процедуры по выбору поставщика</p>\n<p data-line=\"16\"><strong>Веха 1: Архитектура миграции утверждена</strong></p>\n</li>\n<li>\n<p data-line=\"18\">Составлена схема миграции: список сервисов и внешние \"исходящие\" интеграции, разделение на группы (Тиры) для очередности переключения - <strong>Денис К.</strong></p>\n</li>\n<li>\n<p data-line=\"20\">Есть описание L7-логика маршрутизации - <strong>Денис К.</strong></p>\n</li>\n<li>\n<p data-line=\"22\">Есть описание необходимых для пробрасывания в сервисы хедеров (СОРМ, что еще?) - <strong>Леша Г.,</strong></p>\n</li>\n<li>\n<p data-line=\"24\">Задача дя Devops observability логирование хедеров. - <strong>Леша Г.,</strong></p>\n</li>\n<li>\n<p data-line=\"26\">Определены критерии успешного переключения (метрики доступности, latency, ошибки 4xx/5xx) - <strong>Денис К. Леша Г.,</strong></p>\n</li>\n<li>\n<p data-line=\"28\">Согласован план отката и ответственные (RFC) - <strong>Денис К.</strong></p>\n</li>\n<li>\n<p data-line=\"30\">Подготовлен план коммуникация с инструкциями и чеклистом по переключению для сервисов - <strong>Леша Г.</strong></p>\n</li>\n</ul>\n<p data-line=\"32\" class=\"line\">🚧 Блокеры и риски:</p>\n<p data-line=\"34\" class=\"line\">Нет</p>\n",
+          "createdBy": {
+            "self": "https://api.tracker.yandex.net/v3/users/8000000000027940",
+            "id": "8000000000027940",
+            "display": "Aleksey Gimatdinov",
+            "cloudUid": "aje8bmdk9h8221ivrpfi",
+            "passportUid": 1130000069783877
+          },
+          "updatedBy": {
+            "self": "https://api.tracker.yandex.net/v3/users/8000000000000046",
+            "id": "8000000000000046",
+            "display": "Oleg Martynov",
+            "cloudUid": "ajepo7eqqnrclb94mp00",
+            "passportUid": 1130000065048229
+          },
+          "createdAt": "2026-03-11T11:18:40.274+0000",
+          "updatedAt": "2026-03-16T14:17:29.068+0000",
+          "version": 3,
+          "type": "standard",
+          "transport": "internal"
+        }
+      ],
+      "requested_at": "2026-04-16T18:56:46"
+    },
+    "relations_v3": {
+      "ok": false,
+      "status_code": 404,
+      "url": "https://api.tracker.yandex.net/v3/entities/goal/69835a399149ad0d33375800/relations",
+      "data": {
+        "errors": {},
+        "errorsData": {},
+        "errorMessages": [
+          "Requested action for /v3/entities/goal/69835a399149ad0d33375800/relations was not found"
+        ],
+        "statusCode": 404
+      },
+      "requested_at": "2026-04-16T18:56:46"
+    },
+    "checklist_v3": {
+      "ok": false,
+      "status_code": 422,
+      "url": "https://api.tracker.yandex.net/v3/entities/goal/69835a399149ad0d33375800/checklistItems",
+      "data": {
+        "invocation-info": {
+          "req-id": "cy4V4ebh",
+          "hostname": "tracker-api-production-1004-backend-76.sas.yp-c.yandex.net",
+          "exec-duration-millis": 38,
+          "action": "addEntityChecklistItemsApiV2",
+          "app-name": "startrek-b2b",
+          "app-version": "1"
+        },
+        "errors": {
+          "checklistItems": "Добавьте текст в пункт чеклиста."
+        },
+        "errorsData": {},
+        "errorMessages": []
+      },
+      "requested_at": "2026-04-16T18:56:46"
+    },
+    "attachments_v2": {
+      "ok": false,
+      "status_code": 405,
+      "url": "https://api.tracker.yandex.net/v2/attachments?entity=goal&entityId=69835a399149ad0d33375800",
+      "data": {
+        "errors": {},
+        "errorsData": {},
+        "errorMessages": [
+          "GET is not allowed ([POST])"
+        ],
+        "statusCode": 405
+      },
+      "requested_at": "2026-04-16T18:56:46"
+    },
+    "links_v2": {
+      "ok": false,
+      "status_code": 404,
+      "url": "https://api.tracker.yandex.net/v2/links?entity=goal&entityId=69835a399149ad0d33375800",
+      "data": {
+        "errors": {},
+        "errorsData": {},
+        "errorMessages": [
+          "Requested action for /v2/links was not found"
+        ],
+        "statusCode": 404
+      },
+      "requested_at": "2026-04-16T18:56:46"
+    },
+    "changelog_v2": {
+      "ok": false,
+      "status_code": 404,
+      "url": "https://api.tracker.yandex.net/v2/entities/goal/69835a399149ad0d33375800/changelog",
+      "data": {
+        "errors": {},
+        "errorsData": {},
+        "errorMessages": [
+          "Requested action for /v2/entities/goal/69835a399149ad0d33375800/changelog was not found"
+        ],
+        "statusCode": 404
+      },
+      "requested_at": "2026-04-16T18:56:47"
+    }
+  }
+}
